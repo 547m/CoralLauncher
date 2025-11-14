@@ -1,0 +1,36 @@
+﻿<Window x:Class="Coral_Launcher.Views.Loading"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Coral_Launcher.Views"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        mc:Ignorable="d"
+        Title="Coral Launcher" 
+        Height="624" 
+        Width="1000" 
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="#1E1E1E"
+        Icon="/Views/Pages/Icon.ico">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ui:ThemesDictionary Theme="Dark" />
+                <ui:ControlsDictionary />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Views/Season12.png" Stretch="UniformToFill" />
+        </Grid.Background>
+        <Border Background="#AA000000" />
+        <ui:ProgressRing HorizontalAlignment="Center" IsIndeterminate="True" VerticalAlignment="Center" Foreground="White"/>
+        <Border x:Name="ValidBox" Background="ForestGreen" Opacity="1" CornerRadius="10" Margin="342,519,342,25" Visibility="Collapsed">
+            <Grid>
+                <TextBlock Text="Downloading new update..." x:Name="ValidMSG" FontSize="17" FontWeight="Medium" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Width="212"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

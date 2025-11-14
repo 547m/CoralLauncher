@@ -1,0 +1,353 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    x:Class="Coral_Launcher.Views.Pages.Settings"
+    Width="1000"
+    Height="540"
+    HorizontalAlignment="Stretch"
+    VerticalAlignment="Stretch">
+
+    <UserControl.Resources>
+        
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ui:ThemesDictionary Theme="Dark" />
+                <ui:ControlsDictionary />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Background="#1E1E1E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        
+
+        
+        <Border
+            Background="#FF161818"
+            Width="980"
+            Height="103"
+            CornerRadius="10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Margin="0,10,0,0">
+            <Image HorizontalAlignment="Left" Height="76" VerticalAlignment="Top" Width="79" Source="/Views/Pages/meow-modified.png" Margin="10,10,0,0"/>
+        </Border>
+        <TextBlock
+            x:Name="UsernameTextBox"
+            Margin="111,24,595,0"
+            Foreground="#FFFFFFFF"
+            FontWeight="Bold"
+            FontSize="20"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            FontFamily="Segoe UI Black"
+            Height="24" Text=""/>
+        <TextBlock
+            Name="UsernameTextBox_Copy"
+            Margin="190,53,263,0"
+            FontWeight="Bold"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Height="24"
+            Foreground="#FF989898" FontSize="14"
+    ><Run
+                Text=""
+                Foreground="#FF989898" /><Run Text=" "/><Run
+                Foreground="#FFE4E4E4" /></TextBlock>
+        <TextBlock
+            x:Name="UsernameTextBox_Copy1"
+            Margin="111,53,810,0"
+            FontWeight="Bold"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Height="20"
+            Foreground="#FF989898" FontSize="14"
+    ><Run
+                Text="AccountID:"
+                Foreground="#FF989898" /><Run Text=" "/><Run
+                Foreground="#FFE4E4E4" /></TextBlock>
+        <TextBlock
+            x:Name="UsernameTextBox_Copy2"
+            Margin="111,72,810,0"
+            FontWeight="Bold"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Height="20"
+            Foreground="#FF989898" FontSize="14"
+    ><Run
+                Text="DiscordID:"
+                Foreground="#FF989898" /><Run Text=" "/><Run
+                Foreground="#FFE4E4E4" /></TextBlock>
+        <TextBlock
+            x:Name="UsernameTextBox_Copy3"
+            Margin="190,72,268,0"
+            FontWeight="Bold"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Height="24"
+            Foreground="#FF989898" FontSize="14"
+    ><Run
+                Text=""
+                Foreground="#FF989898" /><Run Text=" "/><Run
+                Foreground="#FFE4E4E4" /></TextBlock>
+        <Button
+            x:Name="LogOut_Copy"
+            Content="Log Out"
+            Width="112"
+            Height="40"
+            Opacity="0.85"
+            Foreground="White"
+            FontWeight="Bold"
+            FontSize="15"
+            FontFamily="Segoe UI Black"
+            Click="Logout_Click"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" Margin="872,67,0,0">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFED2323"/>
+                    <GradientStop Color="#FFED2323" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF51BE14" />
+                                <GradientStop Color="#FF2E7D04" Offset="1" />
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="BorderThickness" Value="2"/>
+                    <Setter Property="Padding" Value="10"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" 
+                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="{TemplateBinding BorderThickness}" 
+                                    CornerRadius="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="White"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF419C12" />
+                                        <GradientStop Color="#FF1F5D02" Offset="1" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button
+            x:Name="Path"
+            Content="Change Path"
+            Width="112"
+            Height="40"
+            Opacity="0.85"
+            Foreground="White"
+            FontWeight="Bold"
+            FontSize="15"
+            FontFamily="Segoe UI Black"
+            Click="Path_Click"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" Margin="755,67,0,0">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF23ED9E"/>
+                    <GradientStop Color="#FF3B6756" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF51BE14" />
+                                <GradientStop Color="#FF2E7D04" Offset="1" />
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="BorderThickness" Value="2"/>
+                    <Setter Property="Padding" Value="10"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" 
+                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="{TemplateBinding BorderThickness}" 
+                                    CornerRadius="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="White"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF419C12" />
+                                        <GradientStop Color="#FF1F5D02" Offset="1" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Border
+            Background="#FF161818"
+            Width="405"
+            Height="208"
+            CornerRadius="10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="585,118,0,0"/>
+        <Image HorizontalAlignment="Left" Height="97" VerticalAlignment="Top" Width="98" Source="/Views/Pages/update2.png" Margin="584,122,0,0"/>
+        <Button
+            x:Name="Version_Copy"
+            Content="Check for updates"
+            Width="147"
+            Height="40"
+            Opacity="0.85"
+            Foreground="White"
+            FontWeight="Bold"
+            FontSize="15"
+            FontFamily="Segoe UI Black"
+            Click="Version_Click"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" Margin="837,177,0,0">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF23ED9E"/>
+                    <GradientStop Color="#FF2395ED" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF51BE14" />
+                                <GradientStop Color="#FF2E7D04" Offset="1" />
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="BorderThickness" Value="2"/>
+                    <Setter Property="Padding" Value="10"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" 
+                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="{TemplateBinding BorderThickness}" 
+                                    CornerRadius="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="White"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF419C12" />
+                                        <GradientStop Color="#FF1F5D02" Offset="1" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <TextBlock
+            x:Name="Version_Copy4"
+            Margin="682,157,163,0"
+            FontWeight="Bold"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Height="20"
+            Foreground="#FF989898" FontSize="14"
+    Text="Launcher Version: 0.3.2"
+    />
+        <TextBlock
+            x:Name="UsernameTextBox_Copy4"
+            Margin="682,133,165,0"
+            Foreground="#FFFFFFFF"
+            FontWeight="Bold"
+            FontSize="16"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            FontFamily="Segoe UI Black"
+            Height="24"
+            Text="Check For Updates"/>
+        <TextBlock
+            x:Name="UsernameTextBox_Copy5"
+            Margin="682,222,165,0"
+            Foreground="#FFFFFFFF"
+            FontWeight="Bold"
+            FontSize="16"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            FontFamily="Segoe UI Black"
+            Height="24"
+            Text="Ingame Settings"/>
+        <TextBlock
+            x:Name="Version_Copy1"
+            Margin="682,246,138,0"
+            FontWeight="Bold"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Height="20"
+            Foreground="#FF989898" FontSize="14"
+            Text="Change your settings here!"
+    />
+        <Image HorizontalAlignment="Left" Height="84" VerticalAlignment="Top" Width="85" Source="/Views/Pages/settings.png" Margin="587,222,0,0"/>
+        <ui:ToggleSwitch x:Name="BubbleWrapToggle"
+                 Content="Bubble Wrap Builds"
+                 Margin="682,270,0,0"
+                 VerticalAlignment="Top"
+                 Checked="BubbleWrapToggle_Checked"
+                 Unchecked="BubbleWrapToggle_Unchecked"/>
+
+
+        
+
+
+    </Grid>
+</UserControl>

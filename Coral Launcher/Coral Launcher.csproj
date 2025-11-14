@@ -1,0 +1,100 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Condition="" />
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>Coral_Launcher</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <ApplicationIcon>Assets\Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icon.ico" />
+    <None Remove="Views\backround.jpg" />
+    <None Remove="Views\LoginBackground.png" />
+    <None Remove="Views\logo.png" />
+    <None Remove="Views\Pages\ActualLogo.png" />
+    <None Remove="Views\Pages\agency.png" />
+    <None Remove="Views\Pages\backround.jpg" />
+    <None Remove="Views\Pages\backrounds8.png" />
+    <None Remove="Views\Pages\battlebus.png" />
+    <None Remove="Views\Pages\charity.png" />
+    <None Remove="Views\Pages\fortnitelogo.png" />
+    <None Remove="Views\Pages\Icon.ico" />
+    <None Remove="Views\Pages\LoginBackground.png" />
+    <None Remove="Views\Pages\Logo %283%29.png" />
+    <None Remove="Views\Pages\Logo.png" />
+    <None Remove="Views\Pages\logout %281%29.png" />
+    <None Remove="Views\Pages\logout.png" />
+    <None Remove="Views\Pages\meow-modified.png" />
+    <None Remove="Views\Pages\peely-modified.png" />
+    <None Remove="Views\Pages\s12 %281%29.png" />
+    <None Remove="Views\Pages\s12.png" />
+    <None Remove="Views\Pages\s13.png" />
+    <None Remove="Views\Pages\Season12.png" />
+    <None Remove="Views\Pages\settings.png" />
+    <None Remove="Views\Pages\update.png" />
+    <None Remove="Views\Pages\update2.png" />
+    <None Remove="Views\Pages\User %281%29-modified.png" />
+    <None Remove="Views\Pages\User %281%29.png" />
+    <None Remove="Views\Pages\user.png" />
+    <None Remove="Views\Pages\vbucks.png" />
+    <None Remove="Views\Season12.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\Icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DiscordRichPresence" Version="1.2.1.24" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Text.Json" Version="9.0.3" />
+    <PackageReference Include="WindowsAPICodePack.Shell.CommonFileDialogs" Version="1.1.5" />
+    <PackageReference Include="WPF-UI" Version="4.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icon.ico" />
+    <Resource Include="Views\backround.jpg" />
+    <Resource Include="Views\LoginBackground.png" />
+    <Resource Include="Views\logo.png" />
+    <Resource Include="Views\Pages\agency.png" />
+    <Resource Include="Views\Pages\battlebus.png" />
+    <Resource Include="Views\Pages\charity.png" />
+    <Resource Include="Views\Pages\Icon.ico" />
+    <Resource Include="Views\Pages\LoginBackground.png" />
+    <Resource Include="Views\Pages\Logo.png" />
+    <Resource Include="Views\Pages\meow-modified.png" />
+    <Resource Include="Views\Pages\Season12.png" />
+    <Resource Include="Views\Pages\settings.png" />
+    <Resource Include="Views\Pages\update.png" />
+    <Resource Include="Views\Pages\update2.png" />
+    <Resource Include="Views\Pages\user.png" />
+    <Resource Include="Views\Pages\vbucks.png" />
+    <Resource Include="Views\Season12.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\Pages\Settings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>
